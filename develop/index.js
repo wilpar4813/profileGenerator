@@ -75,20 +75,8 @@ function init() {
             let resumeHTML = generateHTML(data);
             console.log(resumeHTML)
 
- /*           conversion({html: resumeHTML}, function (err, result) {
-                if (err) {
-                    return console.error(err);
-                }
-
-                console.log(result.numberOfPages);
-                console.log(result.logs);
-                result.stream.pipe(fs.createWriteStream('./resume.pdf'));
-                conversion.kill(); // necessary if you use the electron-server strategy, see bellow for details
-            });*/
-        })
-
-
-    })
-})}
+        })//Close second axios call
+    })//Close first axios call
+})}//Close function init
 
 init();
